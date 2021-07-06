@@ -1,0 +1,77 @@
+/*-------------*\
+    Responsive
+\*-------------*/
+$menu-width: 250px!default;
+
+@media only screen and (max-width: 770px){
+    .site-pusher, .site-container { height: 100%; }
+    .site-container { overflow: hidden; }
+    .site-pusher {
+        transition-duration: 0.3s;
+        transform: translateX(0px); 
+    }
+    .content{
+        position: absolute;
+        top: 66px; /* La hauteur du header */
+        right: 0;
+        left: 0;
+        bottom: 0;
+        padding-top: 0;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch; /* Inertie sur iOS */
+      }
+    
+    .header { 
+        position: static;
+     }
+    .header__icon {
+        position: relative;
+        display: block;
+        float: right;
+        width: 50px;
+        height: 66px;
+        cursor: pointer; }
+        .header__icon:after {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 1rem;
+          height: 0;
+          top: 16px;
+          left: 15px;
+          box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white; }
+    
+    /* Le menu collé à gauche est masqué grâce à un transform */
+    .menu {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+      background-color: #2a378b;
+      width: 450px;
+      transform: translateX(450px); 
+    }
+      /* Un lien par ligne */
+      .menu a {
+        display: block;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        border-bottom: 1px solid #303f9f; 
+      }
+    
+    .with--sidebar .site-pusher {
+        transform: translateX(-450px); 
+    }
+    /* On met un cache par dessus le site-content pour bloquer le scroll et permettre le retour au site */
+    .with--sidebar .site-cache {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.6); 
+    }
+}

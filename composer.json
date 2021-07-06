@@ -1,0 +1,23 @@
+{
+    "name": "celine/harrypotter",
+    "description": "MVC training project",
+    "type" : "project",
+    
+    "authors": [
+        {
+            "name": "lulu-la-sorciere"
+        }
+    ],
+    
+    "require": {
+        "php": "^7.4",
+        "altorouter/altorouter": "^2.0",
+        "benoclock/alto-dispatcher": "^1.0",
+        "symfony/var-dumper": "^4.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "HarryPotter\\": "app/"
+        }
+    }
+}
