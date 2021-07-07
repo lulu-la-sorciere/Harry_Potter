@@ -1,5 +1,3 @@
-@import "compass";
-
 
 /*-------------*\
     Base
@@ -21,8 +19,12 @@ a {
     color:inherit;
 }
 .container{
-   @include clearflix;
-   margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+.form{
+    align-self: flex-end;
 }
 .content {
     padding-top: 66px;
@@ -54,20 +56,22 @@ a {
 }
 .menu a{
     padding: 0 10px;
+    color: #fff;
+    background-color: #2e7d32;
+    transition: all 1s ease-out;
 }
-.menu a:hover {
-    color: #c6ff00
+.menu a:hover, a:focus {
+    color: #2e7d32;
+    background-color: #fff;
 }
-form {
+.form {
     float: right;
 }
+
 
 /*-------------*\
     Responsive
 \*-------------*/
-@import "responsive";
-
-
 
 @media only screen and (max-width: 770px){
     .site-pusher, .site-container { height: 100%; }
@@ -96,40 +100,43 @@ form {
         float: right;
         width: 50px;
         height: 66px;
-        cursor: pointer; }
-        .header__icon:after {
-          content: '';
-          position: absolute;
-          display: block;
-          width: 1rem;
-          height: 0;
-          top: 16px;
-          left: 15px;
-          box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white; }
+        cursor: pointer; 
+    }
     
-    /* Le menu collé à gauche est masqué grâce à un transform */
+    .header__icon:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 1rem;
+        height: 0;
+        top: 16px;
+        left: 15px;
+        box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white;
+    }
+    
+    /* Le menu collé à droite est masqué grâce à un transform */
     .menu {
-      position: absolute;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      overflow-y: scroll;
-      -webkit-overflow-scrolling: touch;
-      background-color: #2a378b;
-      width: 450px;
-      transform: translateX(450px); 
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        background-color: #2a378b;
+        width: 150px;
+        transform: translateX(150px); 
     }
       /* Un lien par ligne */
-      .menu a {
+    .menu a {
         display: block;
         height: 40px;
         text-align: center;
         line-height: 40px;
         border-bottom: 1px solid #303f9f; 
-      }
-    
+    }
+
     .with--sidebar .site-pusher {
-        transform: translateX(-450px); 
+        transform: translateX(-150px); 
     }
     /* On met un cache par dessus le site-content pour bloquer le scroll et permettre le retour au site */
     .with--sidebar .site-cache {
@@ -139,5 +146,11 @@ form {
         right: 0;
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.6); 
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        margin: 0 20px;
     }
 }

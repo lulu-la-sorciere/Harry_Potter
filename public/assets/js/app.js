@@ -11,16 +11,29 @@ const app = {
     },
 
     handleClickOnButtonMenu: function(evt){
-        evt.preventDefault();
+      evt.preventDefault();
 
-        const clickOnButtonMenu = evt.currentTarget;
-        console.log(clickOnButtonMenu);
+      const clickOnButtonMenu = evt.currentTarget;
+      console.log(clickOnButtonMenu);
 
-        const body = document.getElementsByName('body');
-        console.log(body);
-        
-       
-    }
+      const bodyElement = clickOnButtonMenu.closest('body');
+
+      console.log(bodyElement);
+      
+     
+      app.menuActive(bodyElement);
+    
+    },
+
+    menuActive: function(bodyElement)
+    {
+      bodyElement.classList.add('with--sidebar');
+    },
+
+    menuInActive: function(bodyElement)
+    {
+      bodyElement.classList.remove('with--sidebar');
+    },
 }
 
 
