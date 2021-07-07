@@ -25,6 +25,7 @@ a {
 }
 .form{
     align-self: flex-end;
+    padding: 15px;
 }
 .content {
     padding-top: 66px;
@@ -62,7 +63,7 @@ a {
 }
 .menu a:hover, a:focus {
     color: #2e7d32;
-    background-color: #fff;
+    border-radius: 40%;
 }
 .form {
     float: right;
