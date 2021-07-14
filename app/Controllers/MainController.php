@@ -6,8 +6,17 @@ use HarryPotter\Controllers\CoreController;
 
 class MainController extends CoreController
 {
+    /**
+     * Method for displaying the Home page
+     *
+     * @return void
+     */
     public function home ()
     {
-        $this->show('main/home');
+        $title = "Accueil";
+
+        $this->show('main/home', [
+            "title" => $title,
+        ]);
     }
 }

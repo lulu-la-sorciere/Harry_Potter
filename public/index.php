@@ -7,4 +7,6 @@ require __DIR__.'/../vendor/autoload.php';
 
 // The application is launched
 $app = new Application('\HarryPotter\Controllers');
+
+
 $app->run();

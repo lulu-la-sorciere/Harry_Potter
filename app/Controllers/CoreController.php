@@ -22,19 +22,19 @@ abstract class CoreController
 
     protected function show(string $viewName, $viewVars = [])
     {
-       // dd($_SERVER);
+       
         // recovery of the property $router that is passed on to the views
         $router = $this->router;
 
         $viewVars['currentPage'] = $viewName;
 
         //absolute url for assets
-        $viewVars['assetsBaseUri'] = $_SERVER['REQUEST_URI'] . 'assets/';
-        //dd($viewVars['assetsBaseUri']);
+        $viewVars['assetsBaseUri'] = $_SERVER['BASE_URI'] . 'assets/';
+       
 
         // absolute url for the root of the site
-        $viewVars['baseUri'] = $_SERVER['REQUEST_URI'];
-        
+        $viewVars['baseUri'] = $_SERVER['BASE_URI'];
+       
         
         extract($viewVars);
 

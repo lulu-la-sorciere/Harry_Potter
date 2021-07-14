@@ -27,6 +27,9 @@ class Application
             //I define the basePath of AltoRouter
             $this->altoRouter->setBasePath($_SERVER['BASE_URI']);
             // so my routes will match the URL
+        }else {
+            // On donne une valeur par défaut à $_SERVER['BASE_URI'] car c'est utilisé dans le CoreController
+            $_SERVER['BASE_URI'] = '/';
         }
 
         $this->mapRoutes();

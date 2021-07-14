@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Harry Potter</title>
+    <title>Harry Potter - <?= $title; ?></title>
 
     <!-- We can still have our own CSS file -->
-    <link rel="stylesheet" href="<?=$assetsBaseUri ?>css/style.css">
+    <link rel="stylesheet" href="<?=$assetsBaseUri ?>/css/style.css">
 </head>
 
 <body>

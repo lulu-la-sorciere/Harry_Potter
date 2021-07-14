@@ -6,10 +6,11 @@ const app = {
       // Recovery of button element
       const buttonMenu = document.getElementById('header__icon');
 
-      //
+      // listen to the menu
       buttonMenu.addEventListener('click', app.handleClickOnButtonMenu);
     },
 
+    
     handleClickOnButtonMenu: function(evt){
       evt.preventDefault();
 

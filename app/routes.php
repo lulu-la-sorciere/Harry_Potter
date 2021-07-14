@@ -18,13 +18,14 @@ $this->addRoute(
     '/', // URL pattern
     'MainController', // Controller name
     'home', // Method name
-    'main-home' // => route's name (for URL generation)
+    'main-home', // => route's name (for URL generation)
 );
 
 $this->addRoute(
     'GET',
-    '/error',
-    'ErrorController',
-    'error404',
+    '/house',
+    'HouseController',
+    'list',
+    'houses-list',
     
 );

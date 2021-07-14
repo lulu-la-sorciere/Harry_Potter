@@ -8,7 +8,7 @@
         </div>
 
         <div>
-            <h1>Accueil</h1>
+            <h1><?= $title; ?></h1>
 
             <p>
                 Bienvenue dans le monde merveilleux de Harry Potter !
@@ -21,7 +21,7 @@
                 Cette série de sept romans raconte les aventures d'un jeune sorcier nommé Harry Potter et de ses amis Ron Weasley et Hermione Granger à l'école de sorcellerie Poudlard, dirigée par Albus Dumbledore. L'intrigue principale de la série met en scène le combat de Harry contre Lord Voldemort, un mage noir à la recherche de l'immortalité ayant autrefois assassiné les parents du garçon. À la tête de ses fidèles adeptes, les Mangemorts, Voldemort cherche depuis des décennies à acquérir le pouvoir absolu sur le monde des sorciers et des Moldus (les humains sans pouvoirs magiques).
             </p>
 
-            <img src="<?= $assetsBaseUri ?>/images/Hogwart.png" alt="">
+            <a href="<?= $router->generate('main-home') ?>"><img src="<?= $assetsBaseUri ?>/images/Hogwart.png" alt="Hogwart"></a>
 
             <p>
                 Ancrés dans la société britannique des années 1990, les romans comportent de nombreux aspects du roman d'apprentissage. Le personnage principal évolue tout d'abord dans un monde dépourvu de magie, puis découvre peu à peu ses capacités, son héritage et ses responsabilités. Tandis que le premier roman établit les bases d'un univers magique librement inspiré des contes et du folklore britannique, l'intrigue gagne en profondeur au fil des romans, abordant des sujets comme la mort ou le libre arbitre. La série a fait par ailleurs l'objet de nombreuses controverses.

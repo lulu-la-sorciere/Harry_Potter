@@ -60,10 +60,12 @@ a {
     color: #fff;
     background-color: #2e7d32;
     transition: all 1s ease-out;
+    border-radius: 40%;
 }
 .menu a:hover, a:focus {
     color: #2e7d32;
     border-radius: 40%;
+    
 }
 .form {
     float: right;
@@ -83,13 +85,13 @@ a {
     }
     .content{
         position: absolute;
-        top: 66px; /* La hauteur du header */
+        top: 66px; 
         right: 0;
         left: 0;
         bottom: 0;
         padding-top: 0;
         overflow-y: scroll;
-        -webkit-overflow-scrolling: touch; /* Inertie sur iOS */
+        -webkit-overflow-scrolling: touch; /* Inertie for iOS */
       }
     
     .header { 
@@ -115,7 +117,7 @@ a {
         box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white;
     }
     
-    /* Le menu collé à droite est masqué grâce à un transform */
+    /* The menu stuck on the righ is hidden by a transform */
     .menu {
         position: absolute;
         right: 0;
@@ -127,7 +129,7 @@ a {
         width: 150px;
         transform: translateX(150px); 
     }
-      /* Un lien par ligne */
+      /* One link per line */
     .menu a {
         display: block;
         height: 40px;
@@ -139,7 +141,7 @@ a {
     .with--sidebar .site-pusher {
         transform: translateX(-150px); 
     }
-    /* On met un cache par dessus le site-content pour bloquer le scroll et permettre le retour au site */
+    /* I put a cache on top of the "content" to block the scroll and allow the return to the site */
     .with--sidebar .site-cache {
         position: absolute;
         top: 0;
@@ -153,5 +155,20 @@ a {
         display: flex;
         flex-direction: column;
         margin: 0 20px;
+    }
+    img {
+        width: 50%;
+    }
+}
+@media only screen and (min-width: 770px){
+    .menu a:hover, a:focus {
+        background-color: #fff; 
+    }
+
+    .house {
+        text-align: left;
+    }
+    img {
+        width: 20%;
     }
 }
