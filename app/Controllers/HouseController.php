@@ -23,4 +23,19 @@ class HouseController extends CoreController
             "houses" =>$houses,
         ]);
     }
+
+    /**
+     * Method for displaying the Details House
+     *
+     * @param [type] $id
+     * @return void
+     */
+    public function detail($id)
+    {
+        $house = House::find($id);
+        $this->show('houses/detail', [
+            "title" => "Maison ". $house->getName(),
+            "house" => $house,
+        ]);
+    }
 }

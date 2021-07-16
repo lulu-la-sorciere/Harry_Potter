@@ -17,7 +17,21 @@ class House extends CoreModel
 
     public static function find($id)
     {
-        //TODO
+        $sql = " SELECT *
+                 FROM House 
+                 WHERE id = :id" ;
+
+        $pdo = Database::getPDO();
+
+        $request = $pdo->prepare($sql);
+        $request->execute([':id' => $id ]);
+
+        $request->setFetchMode(PDO::FETCH_CLASS, self::class);
+
+        $house = $request->fetch();
+
+        return $house;
+
     }
 
     public static function findAll()

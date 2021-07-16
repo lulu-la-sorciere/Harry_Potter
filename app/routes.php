@@ -29,3 +29,11 @@ $this->addRoute(
     'houses-list',
     
 );
+
+$this->addRoute(
+    'GET',
+    '/house/[i:id]',
+    'HouseController',
+    'detail',
+    'houses-detail',
+);

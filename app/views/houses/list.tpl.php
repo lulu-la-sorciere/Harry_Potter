@@ -28,9 +28,9 @@
             <div>
                 <?php foreach ($houses as $house): ?>
             
-               <h2><a href=""> <?= $house->getName();?></a> </h2>
-               <p><?=$house->getDescription();?></p>
-               <img src="<?= $assetsBaseUri ?>/images/<?= $house->getPicture() ?>" alt="">
+               <h2><a href="<?= $house->getId();?>"> <?= $house->getName();?></a> </h2>
+               
+               <img src="<?= $assetsBaseUri ?>/images/<?= $house->getPicture() ?>" alt="<?= $house->getName();?>">
          
                 <?php endforeach; ?>
             </div>
