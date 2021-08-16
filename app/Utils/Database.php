@@ -16,13 +16,14 @@ class Database
         // Retrieving data from the config file
         // the parse_ini_file function parse the file and return an associative array
         $configData = parse_ini_file(__DIR__ . '/../config.ini');
-
+      
         try {
             $this->dbh = new PDO(
                 "mysql:host={$configData['DB_HOST']};dbname={$configData['DB_NAME']};charset=utf8",
                 $configData['DB_USERNAME'],
                 $configData['DB_PASSWORD'],
                 array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING) // Displays SQL errors on the screen
+                
             );
         } catch (\Exception $exception) {
             echo 'Erreur de connexion...<br>';
