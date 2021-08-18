@@ -1,6 +1,6 @@
 
 /*-------------*\
-    Base
+      Base
 \*-------------*/
 html, body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -50,7 +50,7 @@ a {
 }
 
 /*-------------*\
-    Menu
+      Menu
 \*-------------*/
 .menu {
     float: left;
@@ -65,13 +65,19 @@ a {
 .menu a:hover, a:focus {
     color: #2e7d32;
     border-radius: 40%;
-    
 }
 .form {
     float: right;
 }
 
-
+/*-------------*\
+      Footer
+\*-------------*/
+footer {
+    background-color: #2e7d32;
+    padding: 0.25em;
+    font-weight: bold ;
+}
 /*-------------*\
     Responsive
 \*-------------*/

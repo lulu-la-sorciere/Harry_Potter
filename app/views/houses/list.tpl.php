@@ -15,8 +15,8 @@
             <p>
                 Dans le monde de Harry Potter imaginée par J.K.Rowling, il exite 3 écoles :
                 <li> Poudelard est l'école d'Angleterre <img src="<?= $assetsBaseUri ?>/images/Hogwart.png" alt="Hogwart"></li>
-                <li> Beauxbâtons est l'école de France <img src="<?= $assetsBaseUri ?>/images/Beauxbâtons.png"" alt=""></li>
-                <li> Durmstrang est l'école de Bulgarie <img src="<?= $assetsBaseUri ?>/images/Durmstrang.png"" alt=""></li>
+                <li> Beauxbâtons est l'école de France <img src="<?= $assetsBaseUri ?>/images/Beauxbâtons.png" alt="BeauxBâtons"></li>
+                <li> Durmstrang est l'école de Bulgarie <img src="<?= $assetsBaseUri ?>/images/Durmstrang.png" alt="Durmstrang"></li>
             </p>
 
 
