@@ -15,6 +15,12 @@ class House extends CoreModel
 
     // I must implements these methods
 
+    /**
+     * Method to find the informations about a house based on its ID
+     *
+     * @param [type] $id
+     * @return $house
+     */
     public static function find($id)
     {
         $sql = " SELECT *
@@ -34,14 +40,19 @@ class House extends CoreModel
 
     }
 
+    /**
+     * Method to find all houses
+     *
+     * @return $houses
+     */
     public static function findAll()
     {
         $sql = " SELECT * 
                  FROM House ";
         $pdo = Database::getPDO();
 
-        $resquest = $pdo->query($sql);
-        $houses = $resquest->fetchAll(PDO::FETCH_CLASS, self::class);
+        $request = $pdo->query($sql);
+        $houses = $request->fetchAll(PDO::FETCH_CLASS, self::class);
 
         return $houses;
 

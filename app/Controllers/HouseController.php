@@ -4,6 +4,7 @@ namespace HarryPotter\Controllers;
 
 use HarryPotter\Controllers\CoreController;
 use HarryPotter\Models\House;
+use HarryPotter\Models\Character;
 
 class HouseController extends CoreController
 {
@@ -32,10 +33,16 @@ class HouseController extends CoreController
      */
     public function detail($id)
     {
+        
         $house = House::find($id);
+     //dump($house, $house->getName());
+        $character = Character::find($house->getName());
+
+        //dump($character);
         $this->show('houses/detail', [
             "title" => "Maison ". $house->getName(),
             "house" => $house,
+            "character"=>$character,
         ]);
     }
 }

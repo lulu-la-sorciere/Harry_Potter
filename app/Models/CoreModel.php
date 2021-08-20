@@ -8,7 +8,7 @@ abstract class CoreModel
     /**
      * @var int
      */
-    protected $id;
+    protected $ID;
 
     protected $description;
     protected $picture;
@@ -25,21 +25,21 @@ abstract class CoreModel
      *
      * @return  int
      */ 
-    public function getId()
+    public function getID()
     {
-        return $this->id;
+        return $this->ID;
     }
 
     /**
      * Set the value of id
      *
-     * @param  int  $id
+     * @param  int  $ID
      *
      * @return  self
      */ 
-    public function setId(int $id)
+    public function setID(int $ID)
     {
-        $this->id = $id;
+        $this->ID = $ID;
 
         return $this;
     }

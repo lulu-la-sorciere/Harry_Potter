@@ -30,6 +30,12 @@ a {
 .content {
     padding-top: 66px;
 }
+
+.header,.footer {
+    color: #fff;
+    background-color: #2e7d32;
+}
+
 /*-------------*\
     Header
 \*-------------*/
@@ -39,8 +45,6 @@ a {
     right: 0;
     height: 66px;
     line-height: 66px;
-    color: #fff;
-    background-color: #2e7d32;
 }
 
 .header__logo {
@@ -73,11 +77,37 @@ a {
 /*-------------*\
       Footer
 \*-------------*/
-footer {
-    background-color: #2e7d32;
+.footer {
     padding: 0.25em;
     font-weight: bold ;
+    max-width: 100%;
 }
+.footer__share {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 0.2em;
+}
+
+/*-----------------*\
+    House-Details
+\*-----------------*/
+.li{
+    border:#948150 1px solid;
+    padding: 0.2em;
+    margin: 0.5em;
+    border-radius: 20px;
+    box-shadow: 5px 2px 2px #948150;
+}
+.school{
+    width: 100%;
+}
+
+.Founder, .House_Founder_Picture, .House_Founder_Description{
+    margin:1em;
+    max-width: 100%;
+}
+
+
 /*-------------*\
     Responsive
 \*-------------*/
@@ -162,19 +192,50 @@ footer {
         flex-direction: column;
         margin: 0 20px;
     }
-    img {
-        width: 50%;
+    .home{
+        width: 70%;
     }
+    .school{
+        max-width: 25%;
+    }
+ 
 }
 @media only screen and (min-width: 770px){
     .menu a:hover, a:focus {
         background-color: #fff; 
     }
 
-    .house {
+    .house, .paragraphe {
         text-align: left;
     }
-    img {
-        width: 20%;
+  
+    .home {
+        width: 50%;
+        text-align: center;
+      
     }
+    .div_house{
+        display: flex;
+        flex-direction: column;
+      
+    }
+    .li{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        /* flex-wrap: wrap; */
+        max-height: 50%;
+        max-width: 50%;
+    }
+    .school{
+        max-width: 25%;
+      
+    }
+
+    .Founder{
+        display:flex;
+        flex-direction: row;
+    }
+
 }
